@@ -5,21 +5,41 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var articles = {
+    articleOne: {
+        Title: 'Article One | Christie Amalraj',
+        heading: 'Article One',
+        date: 'August 14, 2017',
+        content: `
+            <p>
+                This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
+            </p>
+            <p>
+                This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
+            </p>
+            <p>
+                This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
+            </p>`
 
-var articleOne = {
-    Title: 'Article One | Christie Amalraj',
-    heading: 'Article One',
-    date: 'August 14, 2017',
-    content: `
-        <p>
-            This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
-        </p>
-        <p>
-            This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
-        </p>
-        <p>
-            This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
-        </p>`
+    },
+    articleTwo: {Title: 'Article Two | Christie Amalraj',
+        heading: 'Article Two',
+        date: 'August 14, 2017',
+        content: `
+            <p>
+                This is the content for my second article.
+            </p>`
+
+    },
+    articleThree: {Title: 'Article Three | Christie Amalraj',
+        heading: 'Article Three',
+        date: 'August 14, 2017',
+        content: `
+            <p>
+                This is the content for my third article. 
+            </p>`
+
+    },
 };
 
 function createTemplate (data) {
